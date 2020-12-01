@@ -1,4 +1,4 @@
-//this module 
+//this module creates and returns an array of the criminals listed in the API
 //create empty array
 let officers = []
 
