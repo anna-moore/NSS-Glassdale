@@ -19,4 +19,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 .criminalList{
 	border: 2px dotted #404040 ;
+	flex-basis : 25%;
+	margin: 12px 0;
+	padding: 5px 8px 12px;
+}
+
+.criminalsContainer{
+	
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }

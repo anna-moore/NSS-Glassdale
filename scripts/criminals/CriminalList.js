@@ -1,6 +1,6 @@
 //this module renders the already translated json-> javascripts onto the DOM
 
-import { getCriminals, useCriminals } from './CriminalProvider.js'
+import { getCriminals, useCriminals } from './CriminalDataProvider.js'
 import { Criminal } from "./Criminal.js"
 //gather data
 //find location on the DOM
@@ -8,12 +8,12 @@ import { Criminal } from "./Criminal.js"
     
 export const CriminalList = () => {
     getCriminals().then(()=>{
+        const criminalArray = useCriminals()
         const contentElement = document.querySelector(".criminalsContainer")
 
-        for(let criminalObject of criminals){
+        for(let criminalObject of criminalArray){
             const criminalHTML = Criminal(criminalObject)
             contentElement.innerHTML += criminalHTML
-
         }
     }
         /*
