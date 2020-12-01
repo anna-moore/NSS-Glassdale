@@ -21,5 +21,4 @@ export const getCriminals = () => {
                 criminals = parsedCriminals
             }
         )
-
 }
