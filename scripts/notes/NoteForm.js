@@ -22,9 +22,6 @@ eventHub.addEventListener("click" , clickEvent =>{
 
 
 
-
-
-
 const render = () => {
     contentTarget.innerHTML = `
         <input type= "type" id="author" placeholder="Author"></input>
