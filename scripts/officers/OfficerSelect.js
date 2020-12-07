@@ -12,6 +12,7 @@ eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "officerSelect") {
         // Get the name of the selected officer
         const selectedOfficer = changeEvent.target.value
+        console.log(changeEvent.target.value)
 
         // Define a custom event
         const customEvent = new CustomEvent("officerSelected", {
