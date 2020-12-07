@@ -9,15 +9,16 @@ const eventHub = document.querySelector(".container")
 const criminalElement = document.querySelector(".criminalsContainer")
 
 // Listen for the custom event you dispatched in ConvictionSelect
-eventHub.addEventListener('crimeThatWasChosen', event => {
+eventHub.addEventListener('crimeChosen', event => {
     // Use the property you added to the event detail.
     if (event.detail.crimeThatWasChosen !== "0"){
         
          // Filter the criminals application state down to the people that committed the crime
          //update appStateCriminals with list of criminals
         const crimes = useConvictions()
-        debugger;
-        let crime = crimes.find(() => crimes.id === parseInt(event.detail.crimeThatWasChosen))
+        
+        //reference property on the object 
+        let crime = crimes.find(crimeObject => crimeObject.id === parseInt(event.detail.crimeThatWasChosen))
         let appStateCriminals = useCriminals()
         const matchingCriminals = appStateCriminals.filter(criminal =>{
             

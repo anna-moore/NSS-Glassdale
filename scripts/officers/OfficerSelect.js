@@ -4,7 +4,7 @@
 import { getOfficers, useOfficers } from "./OfficerProvider.js"
 
 // Get a reference to the DOM element where the <select> will be rendered
-const contentTarget = document.querySelector(".filters__crime")
+const contentTarget = document.querySelector(".filters__officer")
 const eventHub = document.querySelector(".container")
 
 //listen for change on Event Hub
