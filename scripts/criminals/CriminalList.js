@@ -1,4 +1,6 @@
 //this module renders the already translated json-> javascripts onto the DOM
+//show criminals based on requested data
+
 
 import { getCriminals, useCriminals } from './CriminalDataProvider.js'
 import { Criminal } from "./Criminal.js"
