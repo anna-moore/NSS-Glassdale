@@ -1,0 +1,18 @@
+{
+  "notes": [
+    {
+      "timestamp": "02/23/20",
+      "author": "Fred ",
+      "noteText": "this is a note",
+      "suspect": "This is a person",
+      "id": 1
+    },
+    {
+      "timestamp": 1607376385534,
+      "author": "anna",
+      "text": "a person is surviving",
+      "suspect": "this is a person",
+      "id": 2
+    }
+  ]
+}
