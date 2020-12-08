@@ -3,7 +3,7 @@
     {
       "timestamp": "02/23/20",
       "author": "Fred ",
-      "noteText": "this is a note",
+      "text": "this is a note",
       "suspect": "This is a person",
       "id": 1
     },
@@ -13,6 +13,20 @@
       "text": "a person is surviving",
       "suspect": "this is a person",
       "id": 2
+    },
+    {
+      "timestamp": 1607457564488,
+      "author": "hello",
+      "text": "hello",
+      "suspect": "hello",
+      "id": 3
+    },
+    {
+      "timestamp": 1607458319852,
+      "author": "this is a person",
+      "text": "this is an event that happened",
+      "suspect": "this is a person too",
+      "id": 4
     }
   ]
 }

@@ -1,19 +1,25 @@
+//
 const eventHub = document.querySelector(".container")
 let notes = []
+
+//dispatch when an note has been added
 const dispatchStateChangeEvent = () => {
     const noteStateChangedEvent = new CustomEvent("noteStateChanged")
 
     eventHub.dispatchEvent(noteStateChangedEvent)
 }
 
+//provide a copy on notes array
+export const useNotes = () => notes.slice()
+
+
 //get the note that is listed in the DOM
-const getNotes = () => {
+export const getNotes = () => {
     return fetch('http://localhost:8088/notes')
         .then(response => response.json())
         .then(parsedNotes => {
             notes = parsedNotes
         })
-
 }
 
 //method of POST is adding info not getting info
