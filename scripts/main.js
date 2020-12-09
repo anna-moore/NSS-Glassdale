@@ -6,7 +6,6 @@ import { ShowNoteButton } from "./notes/ShowNotesButton.js"
 import "./notes/NoteList.js"
 
 
-console.log("Welcome to the main module")
 
 CriminalList()
 ConvictionSelect()

@@ -2,6 +2,7 @@ import { saveNote } from "./NoteProvider.js"
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
 
+//event to save a new note
 eventHub.addEventListener("click" , clickEvent =>{
     if(clickEvent.target.id === "saveNote"){
         const author= document.querySelector("#author").value
@@ -21,7 +22,7 @@ eventHub.addEventListener("click" , clickEvent =>{
 })
 
 
-
+//create form 
 const render = () => {
     contentTarget.innerHTML = `
         <input type= "type" id="author" placeholder="Author"></input>
@@ -30,6 +31,7 @@ const render = () => {
         <button id="saveNote">Save Note</button>
     `
 }
+
 
 export const NoteForm = () => {
     render()

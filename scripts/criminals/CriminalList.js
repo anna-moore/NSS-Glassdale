@@ -36,8 +36,6 @@ eventHub.addEventListener("officerSelected", event => {
 
 
 
-
-
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener('crimeChosen', event => {
     // Use the property you added to the event detail.
@@ -80,15 +78,4 @@ export const CriminalList = () => {
         })
 }
 
-//refactor to use render function 
-// export const CriminalList = () => {
-//     getCriminals().then(()=>{
-//         const criminalArray = useCriminals()
-//         const contentElement = document.querySelector(".criminalsContainer")
 
-//         for(let criminalObject of criminalArray){
-//             const criminalHTML = Criminal(criminalObject)
-//             contentElement.innerHTML += criminalHTML
-//         }
-//     })
-// }

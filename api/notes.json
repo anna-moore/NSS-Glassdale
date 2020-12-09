@@ -27,6 +27,13 @@
       "text": "this is an event that happened",
       "suspect": "this is a person too",
       "id": 4
+    },
+    {
+      "timestamp": 1607530491866,
+      "author": "this",
+      "text": "is",
+      "suspect": "a test",
+      "id": 5
     }
   ]
 }

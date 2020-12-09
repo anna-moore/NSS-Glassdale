@@ -1,4 +1,4 @@
-//
+//provides list of the notes
 const eventHub = document.querySelector(".container")
 let notes = []
 
