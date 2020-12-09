@@ -1,4 +1,6 @@
 //this module renders the already translated json-> javascripts onto the DOM
+//show criminals based on requested data
+
 
 import { getCriminals, useCriminals } from './CriminalDataProvider.js'
 import { Criminal } from "./Criminal.js"
@@ -31,8 +33,6 @@ eventHub.addEventListener("officerSelected", event => {
     }
    
 })
-
-
 
 
 
@@ -78,15 +78,4 @@ export const CriminalList = () => {
         })
 }
 
-//refactor to use render function 
-// export const CriminalList = () => {
-//     getCriminals().then(()=>{
-//         const criminalArray = useCriminals()
-//         const contentElement = document.querySelector(".criminalsContainer")
 
-//         for(let criminalObject of criminalArray){
-//             const criminalHTML = Criminal(criminalObject)
-//             contentElement.innerHTML += criminalHTML
-//         }
-//     })
-// }
