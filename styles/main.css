@@ -24,6 +24,10 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 5px 8px 12px;
 }
 
+.criminal_notes{
+	display: flex;
+
+}
 .criminalsContainer{
 	display: flex;
 	justify-content: space-around;
@@ -31,6 +35,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .noteListContainer{
+	float: right;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -39,9 +44,10 @@ h1,h2,h3,h4,h5,h6 {
 
 .note{
 	border: 2px dotted #404040 ;
-	flex-basis : 25%;
+	flex-basis : 40%;
 	margin: 12px 0;
-	padding: 5px 8px 12px;	
+	padding: 5px 8px 12px;
+	background-color: #D3D3D3;	
 }
 
 .filters{
@@ -67,3 +73,4 @@ h1,h2,h3,h4,h5,h6 {
 	display: flex;
 
 }
+
