@@ -11,6 +11,10 @@ import { useOfficers } from "../officers/OfficerProvider.js"
 const eventHub = document.querySelector(".container")
 const criminalElement = document.querySelector(".criminalsContainer")
 
+
+
+
+
 eventHub.addEventListener("officerSelected", event => {
     // How can you access the officer name that was selected by the user?
     if(event.detail.officer !== "0"){

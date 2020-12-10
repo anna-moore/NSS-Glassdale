@@ -4,6 +4,7 @@
 //set up connection to the eventhub in container
 const contentTarget = document.querySelector(".noteListButton")
 const eventHub = document.querySelector(".container")
+let visible = false
 
 //create a custum event that dispatches click of show notes
 eventHub.addEventListener("click", clickEvent => {
@@ -15,5 +16,12 @@ eventHub.addEventListener("click", clickEvent => {
 
 //button shows up on DOM
 export const ShowNoteButton = () => {
-    contentTarget.innerHTML = "<button id='showNotes'>Show Notes</button>"
+    if(!visible){
+      contentTarget.innerHTML = "<button id='showNotes'>Show Notes</button>"  
+      visible= false
+    }else{
+        contentTarget.innerHTML = "<button id='showNotes'>Show Notes</button>" 
+        visible = true
+    }
+    
 }
