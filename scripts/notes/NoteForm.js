@@ -25,9 +25,10 @@ eventHub.addEventListener("click" , clickEvent =>{
 //create form 
 const render = () => {
     contentTarget.innerHTML = `
-        <input type= "text" id="author" placeholder="Author Name"></input>
-        <textarea id = "text" placeholder="description"></textarea>
-        <input type="text" id="suspect" placeholder="Suspect Name"></input>
+        <h2 class="formHeader">New Form</h2>
+        <input type= "text" id="author" class= "form" placeholder="Author Name"></input>
+        <input type="text" class= "form" id="suspect" placeholder="Suspect Name"></input>
+        <textarea id = "text"  class= "form" placeholder="description"></textarea>
         <button id="saveNote">Save Note</button>
     `
 }
