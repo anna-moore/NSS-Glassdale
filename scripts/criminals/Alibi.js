@@ -1,5 +1,5 @@
 const abiliTarget = document.querySelector(".abili")
-
+const contentTarget = document.querySelector(".abili")
 export const Abili = () =>{
     const criminalArray = useCriminals()
     const criminalAbili = criminalArray.find( (criminalObject => 

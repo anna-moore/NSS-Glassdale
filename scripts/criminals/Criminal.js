@@ -11,7 +11,7 @@ export const Criminal = (criminal) =>{
     </section>`
 }
 
-const contentTarget = document.querySelector(".abili")
+
 const eventHub = document.querySelector(".container")
 
 // On the event hub, listen for a "change" event.
