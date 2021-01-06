@@ -48,7 +48,7 @@ const render = (noteArray, criminals) => {
         // convert the notes objects to HTML with NoteHTMLConverter
         //find the associated criminal person so the note
         //associatedCriminal will be an object 
-        let associatedCriminal = criminals.find( 
+        const associatedCriminal = criminals.find( 
             (criminal) => {
             return criminal.id === note.criminalId
         })

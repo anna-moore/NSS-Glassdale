@@ -1,25 +1,25 @@
 {
   "notes": [
     {
-      "timestamp": "02/23/20",
-      "author": "Fred ",
-      "text": "this is a note",
-      "suspect": 1,
-      "id": 1
-    },
-    {
-      "timestamp": 1609952963481,
-      "author": "hello",
-      "text": "??",
-      "criminalId": 2,
-      "id": 2
-    },
-    {
       "timestamp": 1609955071365,
       "author": "hi",
       "text": "h",
       "criminalId": 5,
       "id": 3
+    },
+    {
+      "timestamp": 1609965624759,
+      "author": "person",
+      "text": "person was alive",
+      "criminalId": 10,
+      "id": 4
+    },
+    {
+      "timestamp": 1609965664097,
+      "author": "hello",
+      "text": "person did an action",
+      "criminalId": 14,
+      "id": 5
     }
   ]
 }
