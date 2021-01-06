@@ -12,7 +12,7 @@ export const useConvictions = () => convictions.slice()
 //load database state into application state with a fetch()
 //make sure that last ".then()" set the local convivtions
 //variable to what is in the response from the API.
-export const getConvictions = () =>{
+export const getConvictions = () => {
 
     return fetch("https://criminals.glassdale.us/crimes")
         .then(response => response.json())

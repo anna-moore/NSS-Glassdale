@@ -1,9 +1,11 @@
 const abiliTarget = document.querySelector(".abili")
 const contentTarget = document.querySelector(".abili")
-export const Abili = () =>{
+export const Abili = () => {
+
     const criminalArray = useCriminals()
-    const criminalAbili = criminalArray.find( (criminalObject => 
-        criminalObject.id === parseInt(nameofevent.detail.)))
+    const criminalAbili = criminalArray.find( (criminalObject) => {
+
+        criminalObject.id === parseInt(nameofevent.detail.value)
         abiliTarget.innerHTML = `
         <article class="abili">
             <ul>
@@ -16,9 +18,9 @@ export const Abili = () =>{
                 }
             </ul>
         </article>`
-
-
+    })
 }
+
 
 //set up to listen to the event 
 //intake criminal id
