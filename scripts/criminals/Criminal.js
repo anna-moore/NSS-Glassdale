@@ -25,9 +25,9 @@ eventHub.addEventListener("click", clickEvent => {
     // Only do this if the `crimeSelect` element was changed
     if (clickEvent.target.id.startsWith("associates--")) {
         // Create custom event. Provide an appropriate name.
-        const abiliEvent = new CustomEvent("abili", {
+        const abiliEvent = new CustomEvent("associatesBtnClicked", {
             detail: {
-                abili: id
+                clickedCriminalId: id
             }
         })
 
