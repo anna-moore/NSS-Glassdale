@@ -5,6 +5,7 @@ import { OfficerSelect } from "./officers/OfficerSelect.js"
 import { ShowNoteButton } from "./notes/ShowNotesButton.js"
 import "./notes/NoteList.js"
 import { AssociatesDialog } from "./criminals/Alibi.js"
+import { ShowWitnessButton } from "./witnesses/Witness.js"
 
 
 
@@ -14,4 +15,5 @@ OfficerSelect()
 NoteForm()
 ShowNoteButton()
 AssociatesDialog()
+ShowWitnessButton()
 //display facilities button ??

@@ -10,8 +10,8 @@ export const useWitnesses = () => witness.slice()
 
 //load database state into application state with fetch
 //make sure the 
-export const getWitnesses = ("https://criminals.glassdale.us/witnesses") => {
-    return fetch()
+export const getWitnesses = () => {
+    return fetch("https://criminals.glassdale.us/witnesses")
     .then(response => response.json())
     .then(
         parsedWitnesses => {
@@ -20,3 +20,10 @@ export const getWitnesses = ("https://criminals.glassdale.us/witnesses") => {
         }
     )
 }
+
+// TODO 
+// ✅  create a witness provider
+// create a html converter
+// create witnessList.js
+//disbatch event that the witness btn is clicked
+//style witness cards?
