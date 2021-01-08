@@ -1,5 +1,4 @@
-//this module takes in the witness list from the api
-//translates json to javascript 
+//this module takes in the witness list from the api, translates json to javascript 
 //creates a slice of the witness array
 
 //initialize empty array to hold witnesses
