@@ -79,7 +79,7 @@ const render = (criminalList) => {
             // Must pass the matching facilities to the Criminal component
             return Criminal(criminalObject, matchingFacilities)
         }
-    ).join("") AssociatesDialog()
+    ).join("") 
 }
 // Render ALL criminals initally
 export const CriminalList = () => {
