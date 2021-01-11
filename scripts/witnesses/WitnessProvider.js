@@ -14,7 +14,7 @@ export const getWitnesses = () => {
     .then(response => response.json())
     .then(
         parsedWitnesses => {
-            console.table(parsedWitnesses)
+            
             witness = parsedWitnesses
         }
     )

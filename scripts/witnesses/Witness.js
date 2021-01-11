@@ -1,26 +1,12 @@
-import { getWitnesses, useWitnesses } from "./WitnessProvider.js"
+//the purpose of this component is to render JS to HTML
 
 
-
-
-//there is no render function right now 
-//🙃🙃🙃🙃🙃🙃🙃🙃🙃
-export const WitnessDisplay = () => {
-    // Trigger fetching the API data and loading it into application state
-    getWitnesses()
-        .then( () => {
-        // Get all convictions from application state
-        let witness = useWitnesses()
-        render(witness)
-        })
-}
-
-
-
-
-export const WitnessHTMLConverter = (witnessObj) => {
-    return `<section>
-    
-    </section>
+export const WitnessHTMLConverter = (witnessObject) => {
+    const [firstName, lastName] = witnessObject.name.split(" ");
+    return `
+    <div id="witness--${witnessObject.id}" class="witness">
+        <h4 id="witness__${witnessObject.name}"><span class="bold">Name</span>: ${lastName}, ${firstName}</h4>
+        <p><span class="bold">Statements</span>: ${witnessObject.statements}</p>
+    </div>
     `
 }

@@ -13,6 +13,7 @@ const dispatchStateChangeEvent = () => {
 export const useNotes = () => notes.slice()
 
 
+
 //get the note that is listed in the DOM
 export const getNotes = () => {
     return fetch('http://localhost:8088/notes')
@@ -45,3 +46,35 @@ export const deleteNote = noteId => {
     .then(getNotes)
     .then(dispatchStateChangeEvent)
   }
+
+// Edits the data in a JSON file, and then dispatches a custom event to the eventHub to refresh the notes array.
+export const editNote = (note) => {
+    return fetch(`http://localhost:8088/notes/${note.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(note)
+    })
+        .then(getNotes)
+        .then(dispatchStateChangeEvent);
+};
+
+/*
+*   Listens for the custom event "deleteNoteEvent" which invokes the function,
+*   deleteNote, and then sets an updated array to render the note list again.
+*/
+eventHub.addEventListener("deleteNoteEvent", e => {
+    deleteNote(e.detail.chosenNoteId)
+});
+
+// Listens for the custom event "editNoteEvent" which invokes the function editNote.
+eventHub.addEventListener("editNoteEvent", e => {
+    editNote(e.detail.note);
+});
+
+// Dispatches noteStateChanged to the eventHub so that getNotes will update the array notes.
+// export const dispatchStateChangeEvent = () => {
+//     const noteStateChangedEvent = new CustomEvent("noteStateChanged");
+//     eventHub.dispatchEvent(noteStateChangedEvent);
+// };

@@ -6,6 +6,7 @@ import { ShowNoteButton } from "./notes/ShowNotesButton.js"
 import "./notes/NoteList.js"
 import { AssociatesDialog } from "./criminals/Alibi.js"
 import { ShowWitnessButton } from "./witnesses/showWitnessStatementBtn.js"
+import "./witnesses/WitnessList.js"
 
 
 

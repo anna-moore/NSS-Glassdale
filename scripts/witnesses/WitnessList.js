@@ -1,22 +1,32 @@
 import { WitnessHTMLConverter } from "./Witness.js"
 import { getWitnesses, useWitnesses } from "./WitnessProvider.js"
 
+const eventHub = document.querySelector(".container");
+const targetListContainer = document.querySelector(".contentContainer");
 
-//add an event listener
+//add an event listener to the witness button 
+eventHub.addEventListener("witnessListGenerator" , e => {
+    WitnessDisplay()
+}) 
+let appStateWitnesses = []
 
 
-
-export const WitnessList = () => {
-    
+export const WitnessDisplay = () => {
+    // Trigger fetching the API data and loading it into application state
+    targetListContainer.innerHTML = "";
     getWitnesses()
-        .then(() => {
-            const allWitnesses = useWitnesses()
-            render(allWitnesses)
+        .then( () => {
+        // Get all convictions from application state
+        appStateWitnesses = useWitnesses()
+        render()
         })
 }
 
-const render = (witnessStatements) => {
-    const witnessStatementHTML = witnessStatements.map( (witnessStatement) => WitnessHTMLConverter(witnessStatement)
-    ).join("")
-    contentTarget.innerHTML = witnessStatementHTML
+
+//render a list of witnessObject onto the DOM
+const render = () => {
+    // const witnessStatementHTML = witnessStatements.map( (witnessStatement) => WitnessHTMLConverter(witnessStatement)
+    // ).join("")
+    // targetListContainer.innerHTML = witnessStatementHTML
+    targetListContainer.innerHTML = appStateWitnesses.map( (w) => WitnessHTMLConverter(w)).join("")
 }

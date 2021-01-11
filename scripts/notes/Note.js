@@ -11,3 +11,5 @@ export const NoteHTMLConverter = (noteObject) => {
         </section>
     `
 }
+
+//define edit and delete note event listeners here

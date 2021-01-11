@@ -20,6 +20,13 @@
       "text": "person did an action",
       "criminalId": 14,
       "id": 5
+    },
+    {
+      "timestamp": 1610381843979,
+      "author": "h",
+      "text": "ghj",
+      "criminalId": 1,
+      "id": 6
     }
   ]
 }

@@ -28,7 +28,7 @@ h1,h2,h3,h4,h5,h6 {
 	display: flex;
 
 }
-.criminalsContainer{
+.contentContainer{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -74,3 +74,9 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+.witness{
+	border: 2px dotted blue ;
+	flex-basis : 25%;
+	margin: 12px 0;
+	padding: 5px 8px 12px;
+}

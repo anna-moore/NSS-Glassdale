@@ -1,6 +1,9 @@
-const contentTarget = document.querySelector(".facility__button")
 
+
+
+const contentTarget = document.querySelector(".facility__button")
 const eventHub = document.querySelector(".container")
+
 let visible = false
 //button shows up on DOM
 export const ShowWitnessButton = () => {
@@ -15,18 +18,19 @@ export const ShowWitnessButton = () => {
 }
 
 // On the event hub, listen for a "change" event.
-eventHub.addEventListener("change", event => {
+eventHub.addEventListener("click", event => {
 
-    // Only do this if the `crimeSelect` element was changed
-    if (event.target.id === "witnessBtn") {
-        // Create custom event. Provide an appropriate name.
-        const customEvent = new CustomEvent("witnessBtn", {
-            detail: {
-                witness: event.target.value
-            }
-        })
+    
+    if (event.target.id === "showWitness") {
+        // Create customwitnessListGenerateEvent event. Provide an appropriate name.
+        const witnessListGenerateEvent = new CustomEvent("witnessListGenerator" //, {
+        //     detail: {
+        //         witness: event.target.value
+        //     }
+        // }
+        )
 
         // Dispatch to event hub
-        eventHub.dispatchEvent(customEvent)
+        eventHub.dispatchEvent(witnessListGenerateEvent)
     }
 })

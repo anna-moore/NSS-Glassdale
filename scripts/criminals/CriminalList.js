@@ -10,7 +10,7 @@ import { getCriminalFacilities, useCriminalFacilities} from "../facility/Crimina
 
 //listen for event
 const eventHub = document.querySelector(".container");
-const criminalElement = document.querySelector(".criminalsContainer");
+const criminalElement = document.querySelector(".contentContainer");
 
 //global component variables 
 let criminals = []
