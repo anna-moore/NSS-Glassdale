@@ -1,12 +1,26 @@
 import { WitnessHTMLConverter } from "./Witness.js"
 import { getWitnesses, useWitnesses } from "./WitnessProvider.js"
+import { CriminalList } from "../criminals/CriminalList.js"
+import { ShowWitnessButton } from "./showWitnessStatementBtn.js";
 
 const eventHub = document.querySelector(".container");
 const targetListContainer = document.querySelector(".contentContainer");
+let visible = false
 
 //add an event listener to the witness button 
 eventHub.addEventListener("witnessListGenerator" , e => {
+//    if(visible){
+//      WitnessDisplay()  
+//    }
+   if(!visible){
     WitnessDisplay()
+    visible = true
+    ShowWitnessButton()
+    }else{
+    CriminalList()
+    visible = false
+    ShowWitnessButton()
+    }
 }) 
 let appStateWitnesses = []
 
@@ -25,8 +39,6 @@ export const WitnessDisplay = () => {
 
 //render a list of witnessObject onto the DOM
 const render = () => {
-    // const witnessStatementHTML = witnessStatements.map( (witnessStatement) => WitnessHTMLConverter(witnessStatement)
-    // ).join("")
-    // targetListContainer.innerHTML = witnessStatementHTML
+    
     targetListContainer.innerHTML = appStateWitnesses.map( (w) => WitnessHTMLConverter(w)).join("")
 }
